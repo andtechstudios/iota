@@ -4,7 +4,7 @@ on:
       - 'v*'
 
 env:
-  DOCKER_PROJECT_DIR: docker
+  DOCKER_PROJECT_DIR: dockerfiles
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
