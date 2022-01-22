@@ -23,7 +23,7 @@
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-			   <string>$IOS_APP_TITLE</string>
+				<string>$IOS_APP_TITLE</string>
 			</dict>
 		</dict>
 	</array>
