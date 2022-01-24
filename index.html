@@ -22,8 +22,10 @@
 
 		<p style="color: var(--theme-text-hidden);">
 			<i>
-				Last updated $CI_JOB_STARTED_AT
+				Last updated <span id="timestamp">$CI_JOB_STARTED_AT</span>
 			</i>
 		</p>
 	</body>
+	<script src="js/vendor/moment.js"></script>
+	<script src="js/timestamp.js"></script>
 </html>
