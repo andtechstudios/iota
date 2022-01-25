@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<head>
+		<title>Over-the-Air Dashboard</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;400;800&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	</head>
+	<body>
+		<h1><span class="theme">Over-the-Air</span></br>Dashboard</h1>
+
+		<p>
+			Click the button below to install <span class="theme"></span>. Then, look for <span class="theme"></span> in your app library.
+		</p>
+		
+		<div>
+			<button type="button" class="button" onclick="location.href='itms-services://?action=download-manifest&url=';">Install on this device<br><span class="details"></span></button>
+		</div>
+
+		<hr>
+
+		<p style="color: var(--theme-text-hidden);">
+			<i>
+				Last updated <span id="timestamp"></span>
+			</i>
+		</p>
+	</body>
+	<script src="js/vendor/moment.js"></script>
+	<script src="js/timestamp.js"></script>
+</html>

@@ -1,0 +1,56 @@
+@import "theme-colors.css";
+
+html, body {
+	text-align: center;
+	height: 100%;
+}
+
+hr
+{
+	border: 1px solid #f0f0f0;
+}
+
+.wrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: var(--theme-background);
+	color: var(--theme-text);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+	text-transform: uppercase;
+	font-weight: 800
+}
+
+.theme
+{
+	color: var(--theme-primary);
+}
+
+.button
+{
+	width: 60%;
+	height: 64px;
+	line-height: 1.5;
+	font-size: 14px;
+	font-weight: 800;
+	color: #fff;
+	margin: 12px;
+	background-color: var(--theme-primary);
+	border: none;
+	border-radius: 45px;
+	cursor: pointer;
+	outline: none;
+}
+
+.button .details
+{
+	font-weight: 200;
+}
