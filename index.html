@@ -8,23 +8,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	</head>
 	<body>
-		<h1><span class="theme">Over-the-Air</span></br>Dashboard</h1>
+		<h1>$IOS_APP_TITLE</br>Installer</h1>
 
-		<p>
-			Click the button below to install <span class="theme">$IOS_APP_TITLE</span>. Then, look for <span class="theme">$IOS_APP_TITLE</span> in your app library.
-		</p>
-		
-		<div>
-			<a href="itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL">
-				<button type="button" class="button">Install on this device<br><span class="details">($IOS_APP_SIZE)</span></button>
-			</a>
-		</div>
-
-		<hr>
-
-		<p style="color: var(--theme-text-hidden);">
-			Last updated <span id="timestamp">$TIMESTAMP</span>
-		</p>
+		<article class="fbbrHt">
+			<hr>
+			
+			<p>
+				Click the button below to install <span class="theme">$IOS_APP_TITLE</span>. Then, look for <span class="theme">$IOS_APP_TITLE</span> in your app library.
+			</p>
+			
+			<div>
+				<a href="itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL">
+					<button type="button" class="button">Install on this device<br><span class="details">($IOS_APP_SIZE)</span></button>
+				</a>
+			</div>
+	
+			<hr>
+	
+			<p class="meta">
+				Last updated <span id="timestamp">$TIMESTAMP</span>
+			</p>
+		</article>
 	</body>
 	<script src="js/vendor/moment.js"></script>
 	<script src="js/timestamp.js"></script>
