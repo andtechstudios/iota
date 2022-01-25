@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          export IOS_APP_URL="https://github.com/andtechstudios/ios-ota"
-          export IOS_APP_URL="https://github.com/andtechstudios/ios-ota"
+          export IOS_APP_URL="https://github.com/andtechstudios/ios-ota/"
+          export IOS_MANIFEST_URL="https://github.com/andtechstudios/ios-ota/blob/master/manifest.plist"
           export IOS_APP_TITLE="My Cool App"
           export IOS_APP_SIZE="14.2 MB"
           export TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
