@@ -1,0 +1,23 @@
+on:  
+  push:
+    branches:
+      - master
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    container: ghcr.io/andtechstudios/ios-ota
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+        export IOS_APP_URL="https://github.com/andtechstudios/ios-ota"
+        export IOS_APP_URL="https://github.com/andtechstudios/ios-ota"
+        export IOS_APP_TITLE="My Cool App"
+        export IOS_APP_TITLE="14.2 MB"
+      - run: |
+        envsubst < index.html > temp.html && mv temp.html index.html
+        envsubst < manifest.plist > temp.plist && mv temp.plist manifest.plist
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
