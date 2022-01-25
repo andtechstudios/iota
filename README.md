@@ -10,6 +10,7 @@
 | `IOS_APP_TITLE` | `$CI_PROJECT_TITLE` |
 | `IOS_APP_BUNDLE_IDENTIFIER` | `com.company.product` |
 | `IOS_APP_VERSION` | *see code below* |
+| `IOS_APP_SIZE` | *sizeof build.ipa* |
 
 ```
 version=$(git tag -l --sort=-v:refname | head -n 1)
