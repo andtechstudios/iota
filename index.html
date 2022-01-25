@@ -4,7 +4,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;400;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	</head>
 	<body>
@@ -15,15 +15,15 @@
 		</p>
 		
 		<div>
-			<button type="button" class="button" onclick="location.href='itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL';">Install on this device<br><span class="details">$IOS_APP_SIZE</span></button>
+			<a href="itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL">
+				<button type="button" class="button">Install on this device<br><span class="details">($IOS_APP_SIZE)</span></button>
+			</a>
 		</div>
 
 		<hr>
 
 		<p style="color: var(--theme-text-hidden);">
-			<i>
-				Last updated <span id="timestamp">$TIMESTAMP</span>
-			</i>
+			Last updated <span id="timestamp">$TIMESTAMP</span>
 		</p>
 	</body>
 	<script src="js/vendor/moment.js"></script>
