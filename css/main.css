@@ -28,24 +28,11 @@
 	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
 }
 
-html, body {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-hr
+h1,h2,h3,h4,h5,h6
 {
-	border: 1px solid #f0f0f0;
-}
-
-.wrap {
-	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	font-weight: 800;
+	font-size: 34px;
+	color: #000;
 }
 
 body {
@@ -56,11 +43,23 @@ body {
 	color: var(--theme-text);
 }
 
-h1,h2,h3,h4,h5,h6
+html, body {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.title
 {
-	font-weight: 800;
-	font-size: 34px;
-	color: #000;
+	
+}
+
+.main
+{
+	max-width: 80%;
+	margin: auto;
 }
 
 .theme
@@ -76,36 +75,34 @@ h1,h2,h3,h4,h5,h6
 	font-size: 14px;
 	font-weight: 600;
 	color: #fff;
-	margin: 12px;
 	background-color: var(--theme-primary);
 	border: none;
-	border-radius: 45px;
+	border-radius: 32px;
 	cursor: pointer;
-	outline: none;
 }
 
 .button .details
 {
-	font-weight: 300;
+	font-weight: 400;
 }
 
-.fbbrHt
+.app-icon
 {
-	box-sizing: border-box;
-	overflow: visible;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 16px;
-	padding-right: 16px;
-	position: relative;
-	max-width: 1442px;
-	width: 100%;
-	flex: 1 0 auto;
-	min-height: 500px;
+	max-height: 1%;
+	max-width: 8em;
+	height: auto;
+	width: auto\9; /* ie8 */
+	border-radius: 22.5%;
 }
 
-.meta
+#description
+{
+	margin: 24px 0px 40px;
+}
+
+#meta
 {
 	color: var(--theme-text-hidden);
 	font-size: 12px;
+	margin: 24px 0px 40px;
 }
