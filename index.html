@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<head>
-		<title>Over-the-Air Dashboard</title>
+		<title>$IOS_APP_TITLE</title>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -8,23 +8,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	</head>
 	<body>
-
-		<article class="fbbrHt">
-			<h1>$IOS_APP_TITLE</h1>
-			
-			<p>
-				Click the button below to install <span class="theme">$IOS_APP_TITLE</span> to this device. Then, look for <span class="theme">$IOS_APP_TITLE</span> in your app library.
-			</p>
-			
-			<div>
-				<a href="itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL">
-					<button type="button" class="button">Install<br><span class="details">($IOS_APP_SIZE)</span></button>
-				</a>
+		<article>
+			<div class="title">
+				<h1>$IOS_APP_TITLE</h1>
 			</div>
-	
-			<p class="meta">
-				Last updated <span id="timestamp">$TIMESTAMP</span>
-			</p>
+
+			<div class="main">
+				<div>
+					<img class="app-icon" src="static/icon.png">
+				</div>
+				
+				<p id="description">
+					Click the button below to install <span class="theme">$IOS_APP_TITLE</span> to this device. Then, look for <span class="theme">$IOS_APP_TITLE</span> in your app library.
+				</p>
+				
+				<div>
+					<a href="itms-services://?action=download-manifest&url=$IOS_MANIFEST_URL">
+						<button type="button" class="button">Install<br><span class="details">($IOS_APP_SIZE)</span></button>
+					</a>
+				</div>
+		
+				<div>
+					<p id="meta">
+						Last updated <span id="timestamp">$TIMESTAMP</span>
+					</p>
+				</div>
+			</div>
 		</article>
 	</body>
 	<script src="js/vendor/moment.js"></script>
