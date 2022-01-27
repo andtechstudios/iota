@@ -3,10 +3,10 @@
   * `index.html`
   * `manifest.list`
 
-| Name | Example |
+| Name | Example (GitLab CI/CD) |
 | --- | --- |
-| `IOS_APP_URL` | `https://$CI_PROJECT_ROOT_NAMESPACE.$CI_PAGES_DOMAIN/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/build.ipa` |
-| `IOS_MANIFEST_URL` | `https://$CI_PROJECT_ROOT_NAMESPACE.$CI_PAGES_DOMAIN/-/$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/manifest.plist` |
+| `IOS_MANIFEST_URL` | `$CI_PAGES_URL/manifest.plist` |
+| `IOS_APP_URL` | `$CI_PAGES_URL/build.ipa` |
 | `IOS_APP_TITLE` | `$CI_PROJECT_TITLE` |
 | `IOS_APP_BUNDLE_IDENTIFIER` | `com.company.product` |
 | `IOS_APP_VERSION` | *see code below* |
@@ -21,3 +21,6 @@ version=${version/v/}
 2. Add your iOS app (`.ipa`).
 3. Publish this website to a publicly accessible location (i.e. GitHub Pages).
 4. From the iPhone/iPad you want to install the app onto, visit the web page. Follow the instructions to download the app to your device.
+
+# Links
+* [ios-ota container image](https://github.com/andtechstudios/ios-ota/pkgs/container/ios-ota)
