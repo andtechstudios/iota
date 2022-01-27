@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-size="$(stat -c %s $1)"
-size="$(numfmt --to=si --suffix=B --format='%.1f' $size)"
-echo $size | sed -rn 's/([[:alpha:]]+)/ \1/p'
