@@ -1,3 +1,6 @@
+# iOTA
+*Over-the-Air dashboard for iOS developers*
+
 ## Usage
 1. Substitute the following environment variables. You will need to modify:
   * `index.html`
@@ -23,4 +26,4 @@ version=${version/v/}
 4. From the iPhone/iPad you want to install the app onto, visit the web page. Follow the instructions to download the app to your device.
 
 # Links
-* [iota container image](https://github.com/andtechstudios/iota/pkgs/container/iota)
+* [iOTA container image](https://github.com/andtechstudios/iota/pkgs/container/iota)
