@@ -23,4 +23,4 @@ version=${version/v/}
 4. From the iPhone/iPad you want to install the app onto, visit the web page. Follow the instructions to download the app to your device.
 
 # Links
-* [ios-ota container image](https://github.com/andtechstudios/ios-ota/pkgs/container/ios-ota)
+* [iota container image](https://github.com/andtechstudios/iota/pkgs/container/iota)
