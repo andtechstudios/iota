@@ -1,5 +1,5 @@
 # iOTA
-*Over-the-Air dashboard for iOS developers*
+*Template frontend for over-the-air distribution*
 
 ## Usage
 1. Substitute the following environment variables. You will need to modify:
