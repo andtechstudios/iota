@@ -8,13 +8,13 @@
 
 | Name | Example (GitLab CI/CD) |
 | --- | --- |
-| `IOS_MANIFEST_URL` | `$CI_PAGES_URL/manifest.plist` |
-| `IOS_APP_URL` | `$CI_PAGES_URL/build.ipa` |
-| `IOS_APP_TITLE` | `$CI_PROJECT_TITLE` |
-| `IOS_APP_BUNDLE_IDENTIFIER` | `com.company.product` |
-| `IOS_APP_VERSION` | *see code below* |
-| `IOS_APP_SIZE` | `sizeof build.ipa` |
-| `TIMESTAMP` | `$CI_JOB_STARTED_AT` |
+| `IOTA_DOWNLOAD_URL` | `itms-services://?action=download-manifest&url=$CI_PAGES_URL/manifest.plist` |
+| `IOTA_APP_URL` | `$CI_PAGES_URL/build.ipa` |
+| `IOTA_APP_TITLE` | `$CI_PROJECT_TITLE` |
+| `IOTA_APP_BUNDLE_IDENTIFIER` | `com.company.product` |
+| `IOTA_APP_VERSION` | *see code below* |
+| `IOTA_APP_SIZE` | `sizeof build.ipa` |
+| `IOTA_TIMESTAMP` | `$CI_JOB_STARTED_AT` |
 
 ```
 version=$(git tag -l --sort=-v:refname | head -n 1)
