@@ -1,23 +1,25 @@
-<!DOCTYPE html>
-	<head>
+<!DOCTYPE html>	
+	<html lang="en">
+		<head>
 		<title>$IOTA_APP_TITLE</title>
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 		<meta http-equiv="Pragma" content="no-cache">
 		<meta http-equiv="Expires" content="0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<script src="https://unpkg.com/darken"></script>
 	</head>
 	<body>
-		<article>
-			<div class="title">
+		<div class="page">
+			<div id="title">
 				<h1>$IOTA_APP_TITLE</h1>
 			</div>
-
-			<div class="main">
-				<div>
+			<div class="content">
+				<div id="icon">
 					<img class="app-icon" src="static/icon.png">
 				</div>
 				
@@ -25,20 +27,35 @@
 					Click the button below to install <span class="theme">$IOTA_APP_TITLE</span> to this device. Then, look for <span class="theme">$IOTA_APP_TITLE</span> in your app library.
 				</p>
 				
-				<div>
+				<div id="downloader">
 					<a href="$IOTA_DOWNLOAD_URL">
 						<button type="button" class="button">Install<br><span class="details">($IOTA_APP_SIZE)</span></button>
 					</a>
 				</div>
-		
-				<div>
-					<p id="meta">
-						Last updated <span id="timestamp">$IOTA_TIMESTAMP</span><br><span id="timestamp-secondary">$IOTA_TIMESTAMP</span>
-					</p>
-				</div>
 			</div>
-		</article>
+		
+			<div>
+				<p id="meta">
+					Last updated <span id="timestamp">$IOTA_TIMESTAMP</span><br><span id="timestamp-secondary">$IOTA_TIMESTAMP</span>
+				</p>
+			</div>
+		</div>
 	</body>
 	<script src="js/vendor/moment.js"></script>
 	<script src="js/timestamp.js"></script>
+	<script>
+		const options = {
+			default: "light",
+			usePrefersColorScheme: true,
+			remember: null,
+			variables: {
+				"--text-important-color" : ["#000000", "#FFFFFF"],
+				"--text-primary-color" : ["#494949", "#CCCCCC"],
+				"--text-secondary-color" : ["#888888", "#666666"],
+				"--theme-primary-color" : ["#0a7afe", "#0a7afe"],
+				"--background-color" : ["#fafafa", "#000000"]
+			},
+		}
+		const darkmode = new darken(options);
+	</script>
 </html>
