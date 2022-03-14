@@ -73,28 +73,23 @@ h1,h2,h3,h4,h5,h6
 	width: 100%;
 }
 
-.download-button
+.button
 {
-	background-color: var(--theme-primary-color);
-	border-radius: 64px;
-	padding: 16px;
-
+	width: 80%;
+	height: 64px;
+	line-height: 1.2;
 	font-size: 1em;
 	font-weight: 600;
-
-	line-height: 1.125em;
-}
-
-.download-button .details
-{
-	font-size: 0.75em;
-	font-weight: 400;
-}
-
-.xbox
-{
 	color: #fff;
-	margin: auto;
+	background-color: var(--theme-primary-color);
+	border: none;
+	border-radius: 32px;
+	cursor: pointer;
+}
+.button .details
+{
+	font-weight: 400;
+	font-size: 0.75em;
 }
 
 #icon
