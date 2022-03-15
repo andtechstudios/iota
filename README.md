@@ -10,7 +10,7 @@
 
 > You can use `envsubst` to assist with this step.
 
-4. Optional: replace `static/icon.png` without *your* app's icon.
+4. Optional: replace `static/icon.png` with *your* app's icon.
 5. Publish the website to a **publicly accessible** location (i.e. GitHub Pages).
 6. From the iPhone/iPad you want to install the app onto, visit the web page. Follow the instructions to download the app to your device.
 
