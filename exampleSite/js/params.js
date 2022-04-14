@@ -14,9 +14,10 @@ function loadJSON(path, success, error) {
 	xhr.send();
 }
 
-loadJSON("./params.json", onRead,'jsonp');
+loadJSON("./data/constants.json", onReadConstants,'jsonp');
+loadJSON("./data/metadata.json", onReadMetadata,'jsonp');
 
-function onRead(info)
+function onReadConstants(info)
 {
 	document.title = info.title;
 	const collection = document.getElementsByClassName("title");
@@ -26,10 +27,13 @@ function onRead(info)
 
 	const download = document.getElementById("download");
 	download.href = info.downloadUrl;
+}
 
-	document.getElementById("filesize").textContent = info.displaySize;
+function onReadMetadata(data)
+{
+	document.getElementById("filesize").textContent = data.displaySize;
 
-	var date = new Date(info.timestamp);
+	var date = new Date(data.timestamp);
 	document.getElementById("timestamp").textContent = moment(date).fromNow();
 	document.getElementById("timestamp-secondary").textContent = moment(date).format('MMM D, HH:mm');
 }
