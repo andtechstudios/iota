@@ -17,7 +17,7 @@
 	<body>
 		<div class="page">
 			<div id="title">
-				<h1>$IOTA_APP_TITLE</h1>
+				<h1 class="title">$IOTA_APP_TITLE</h1>
 			</div>
 			<div class="content">
 				<div id="icon">
@@ -25,11 +25,11 @@
 				</div>
 				
 				<p id="description">
-					Click the button below to install <span class="theme">$IOTA_APP_TITLE</span> to this device. Then, look for <span class="theme">$IOTA_APP_TITLE</span> in your app library.
+					Click the button below to install <span class="title theme">$IOTA_APP_TITLE</span> to this device. Then, look for <span class="title theme">$IOTA_APP_TITLE</span> in your app library.
 				</p>
 				
 				<div class="downloads">
-					<a href="$IOTA_DOWNLOAD_URL">
+					<a id="download" href="$IOTA_DOWNLOAD_URL">
 						<button type="button" class="button">Install<br><span class="details" id="filesize">$IOTA_APP_SIZE</span></button>
 					</a>
 				</div>
@@ -42,7 +42,7 @@
 		</div>
 	</body>
 	<script src="js/vendor/moment.js"></script>
-	<script src="js/variables.js"></script>
+	<script src="js/params.js"></script>
 	<script>
 		const options = {
 			default: "light",
