@@ -6,7 +6,7 @@ on:
 jobs:
   pages:
     runs-on: ubuntu-latest
-    container: ghcr.io/andtechstudios/iota
+    container: ghcr.io/andtechstudios/iota-ci
     steps:
       - uses: actions/checkout@v2
       - run: |
