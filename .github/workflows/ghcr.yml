@@ -4,9 +4,9 @@ on:
       - 'v*'
 
 env:
-  DOCKER_PROJECT_DIR: dockerfiles
+  DOCKER_PROJECT_DIR: src/ci
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository }}-ci
 
 jobs:
   deploy-image:

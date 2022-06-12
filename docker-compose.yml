@@ -1,0 +1,10 @@
+services:
+  iota:
+    image: andtechstudios/iota
+    ports:
+      - 8080:8080
+    restart: always
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env

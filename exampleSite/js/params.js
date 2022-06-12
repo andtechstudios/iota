@@ -14,20 +14,7 @@ function loadJSON(path, success, error) {
 	xhr.send();
 }
 
-loadJSON("./data/constants.json", onReadConstants,'jsonp');
 loadJSON("./data/metadata.json", onReadMetadata,'jsonp');
-
-function onReadConstants(info)
-{
-	document.title = info.title;
-	const collection = document.getElementsByClassName("title");
-	for (let i = 0; i < collection.length; i++) {
-		collection[i].innerHTML = info.title;
-	}
-
-	const download = document.getElementById("download");
-	download.href = info.downloadUrl;
-}
 
 function onReadMetadata(data)
 {
