@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           cd exampleSite
+          export BASE_URL="https://andtechstudios.github.io/iota"
           export IOTA_APP_URL="https://github.com/andtechstudios/iota/"
           export IOTA_DOWNLOAD_URL="itms-services://?action=download-manifest&url=https://github.com/andtechstudios/iota/blob/master/manifest.plist"
           export IOTA_APP_TITLE="My Cool App"
