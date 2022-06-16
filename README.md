@@ -6,9 +6,9 @@
 # Usage
 ## Docker (Recommended)
 1. Clone [this repository](https://github.com/andtechstudios/iota).
-2. Modify the variables in `.env` for your use case.
-3. Update the variables in `data/metadata.json` when necessary.
-4. Run `docker-compose up`.
+2. Create (or use [this](https://github.com/andtechstudios/iota/blob/master/.env.sample)) an environment file for your use case. The file should be name `.env` and placed in the same folder as the `docker-compose.yml`.
+3. Run `docker-compose up`.
+4. Update the variables in `data/metadata.json` when necessary. Make sure to reload the container.
 
 ## Static Site
 You can deploy *iOTA* as part of your CI/CD workflow.
