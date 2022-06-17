@@ -14,7 +14,7 @@ function loadJSON(path, success, error) {
 	xhr.send();
 }
 
-loadJSON("IOTA_DOWNLOAD_METADATA_URL", onReadMetadata,'jsonp');
+loadJSON("$IOTA_DOWNLOAD_METADATA_URL", onReadMetadata,'jsonp');
 
 function onReadMetadata(data)
 {
