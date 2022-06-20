@@ -5,8 +5,8 @@ RUN apk add caddy
 
 WORKDIR /app
 
-COPY exampleSite/ .
+COPY exampleSite ./site
 COPY src/server/run.sh ./
 COPY src/server/Caddyfile ./
 
-ENTRYPOINT ./run.sh
+ENTRYPOINT /app/run.sh

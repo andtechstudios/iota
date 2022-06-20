@@ -1,9 +1,7 @@
 #!/usr/bin/env sh
 
-envsubst < index.html > temp.html && mv temp.html index.html
-envsubst < js/params.js > temp.js && mv temp.js js/params.js
-envsubst < manifest.plist > temp.plist && mv temp.plist manifest.plist
-
-rm run.sh
+envsubst < site/index.html > temp.html && mv temp.html site/index.html
+envsubst < site/js/params.js > temp.js && mv temp.js site/js/params.js
+envsubst < site/manifest.plist > temp.plist && mv temp.plist site/manifest.plist
 
 caddy run
