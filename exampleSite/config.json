@@ -1,0 +1,19 @@
+{
+	"platforms": {
+		"windows":
+		{
+			"downloadUrl": "build.txt",
+			"metadataUrl": "metadata.json"
+		},
+		"android":
+		{
+			"downloadUrl": "build.txt",
+			"metadataUrl": "metadata.json"
+		},
+		"ios":
+		{
+			"downloadUrl": "build.txt",
+			"metadataUrl": "metadata.json"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"platforms": {
+		"windows":
+		{
+			"downloadUrl": "https://dl.example.com/windows/build.zip",
+			"metadataUrl": "https://dl.example.com/windows/metadata.json"
+		},
+		"android":
+		{
+			"downloadUrl": "https://dl.example.com/android/build.apk",
+			"metadataUrl": "https://dl.example.com/android/metadata.json"
+		},
+		"ios":
+		{
+			"downloadUrl": "https://dl.example.com/ios/build.ipa",
+			"metadataUrl": "https://dl.example.com/ios/metadata.json"
+		}
+	}
+}
