@@ -14,11 +14,12 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 		<script src="https://unpkg.com/darken"></script>
+		<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
 	</head>
 	<body>
 		<div class="page">
-			<div id="title">
-				<h1 class="title">$IOTA_APP_TITLE</h1>
+			<div>
+				<h1 id="title" class="title">$IOTA_APP_TITLE</h1>
 			</div>
 			<div class="content">
 				<div id="icon">
@@ -29,7 +30,7 @@
 				</p>
 				<div class="downloads">
 					<a id="download" href="$IOTA_DOWNLOAD_URL">
-					<button type="button" class="button">Install<br><span class="details" id="filesize">$IOTA_APP_SIZE</span></button>
+					<button type="button" class="button"><span id="download-text">Install</span><br><span class="details" id="filesize">$IOTA_APP_SIZE</span></button>
 					</a>
 				</div>
 			</div>
@@ -41,7 +42,7 @@
 		</div>
 	</body>
 	<script src="js/vendor/moment.js"></script>
-	<script src="js/params.js"></script>
+	<script src="js/main.js"></script>
 	<script>
 		const options = {
 			default: "light",

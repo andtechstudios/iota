@@ -5,6 +5,6 @@ services:
       - 8080:8080
     restart: always
     volumes:
-      - ./data:/app/data
+      - ./config.json:/app/config.json
     env_file:
       - .env

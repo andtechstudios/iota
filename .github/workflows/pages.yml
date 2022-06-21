@@ -11,12 +11,16 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           cd exampleSite
+      - run: |
+          export TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          export FILESIZE="14.2 MB"
+          cat <<< $(jq ".timestamp = \"$TIMESTAMP\"" metadata.json) > metadata.json
+          cat <<< $(jq ".displaySize = \"$FILESIZE\"" metadata.json) > metadata.json
+      - run: |
           export BASE_URL="https://andtechstudios.github.io/iota"
-          export IOTA_APP_URL="https://github.com/andtechstudios/iota/"
+          export IOTA_APP_URL="https://github.com/andtechstudios/iota/build.txt"
           export IOTA_DOWNLOAD_URL="itms-services://?action=download-manifest&url=https://github.com/andtechstudios/iota/blob/master/manifest.plist"
           export IOTA_APP_TITLE="My Cool App"
-          export IOTA_APP_SIZE="14.2 MB"
-          export IOTA_TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           envsubst < index.html > temp.html && mv temp.html index.html
           envsubst < manifest.plist > temp.plist && mv temp.plist manifest.plist
       - uses: peaceiris/actions-gh-pages@v3

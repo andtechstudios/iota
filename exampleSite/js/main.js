@@ -14,8 +14,7 @@ function loadJSON(path, success, error) {
 	xhr.send();
 }
 
-loadJSON("$IOTA_DOWNLOAD_METADATA_URL", onReadMetadata,'jsonp');
-
+// Callbacks
 function onReadMetadata(data)
 {
 	document.getElementById("filesize").textContent = data.displaySize;
@@ -24,3 +23,18 @@ function onReadMetadata(data)
 	document.getElementById("timestamp").textContent = moment(date).fromNow();
 	document.getElementById("timestamp-secondary").textContent = moment(date).format('MMM D, HH:mm');
 }
+
+function onReadConfig(data)
+{	
+	var platform = data.platforms[device.os];
+	if (platform === undefined) {
+		console.warn("The platform '" + device.os + "' is not supported!");
+		return;
+	}
+
+	document.getElementById("download").href = platform.downloadUrl;
+	loadJSON(platform.metadataUrl, onReadMetadata,'jsonp');
+}
+
+// Begin code
+loadJSON("./config.json", onReadConfig,'jsonp');
