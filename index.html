@@ -1,7 +1,7 @@
 <!DOCTYPE html>	
 <html lang="en">
 	<head>
-		<base href="https://andtechstudios.github.io/iota/">
+		<base href="/">
 		<title>My Cool App</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,34 +14,44 @@
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="css/main.css">
 		<script src="https://unpkg.com/darken"></script>
+		<script src="https://unpkg.com/current-device/umd/current-device.min.js"></script>
 	</head>
 	<body>
 		<div class="page">
-			<div id="title">
-				<h1 class="title">My Cool App</h1>
+			<div>
+				<h1 id="title" class="title">My Cool App</h1>
 			</div>
 			<div class="content">
 				<div id="icon">
 					<img class="app-icon" src="static/icon.png">
 				</div>
-				<p id="description">
-					Click the button below to install <span class="title theme">My Cool App</span> to this device. Then, look for <span class="title theme">My Cool App</span> in your app library.
-				</p>
-				<div class="downloads">
-					<a id="download" href="itms-services://?action=download-manifest&url=https://github.com/andtechstudios/iota/blob/master/manifest.plist">
-					<button type="button" class="button">Install<br><span class="details" id="filesize">14.2 MB</span></button>
-					</a>
+				<div id="supported" style="display: none">
+					<p id="description">
+						Click the button below to install <span class="title theme">My Cool App</span> to this device. Then, look for <span class="title theme">My Cool App</span> in your app library.
+					</p>
+					<div class="downloads">
+						<a id="download" href="itms-services://?action=download-manifest&url=https://github.com/andtechstudios/iota/blob/master/manifest.plist">
+						<button type="button" class="button">
+							<span id="download-text">Install</span>
+							<img id="os-icon" src="static/svg/unknown.svg" height="11" width="11" />
+							<br>
+							<span class="details" id="filesize"></span></button>
+						</a>
+					</div>
+					<div>
+						<p id="meta">
+							Last updated <span id="timestamp"></span><br><span id="timestamp-secondary"></span>
+						</p>
+					</div>
 				</div>
-			</div>
-			<div>
-				<p id="meta">
-					Last updated <span id="timestamp">2022-06-20T19:52:30Z</span><br><span id="timestamp-secondary">2022-06-20T19:52:30Z</span>
-				</p>
+				<div id="unsupported" style="display: block">
+					<p>No downloads available for your device. Visit this page from a supported device.</p>
+				</div>
 			</div>
 		</div>
 	</body>
 	<script src="js/vendor/moment.js"></script>
-	<script src="js/params.js"></script>
+	<script src="js/main.js"></script>
 	<script>
 		const options = {
 			default: "light",
