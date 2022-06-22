@@ -28,12 +28,18 @@ function onReadConfig(data)
 {	
 	var platform = data.platforms[device.os];
 	if (platform === undefined) {
-		console.warn("The platform '" + device.os + "' is not supported!");
+		document.getElementById("supported").style.display = "none";
+		document.getElementById("unsupported").style.display = "block";
 		return;
 	}
 
+	console.log("allowed");
 	document.getElementById("download").href = platform.downloadUrl;
-	document.getElementById("os-icon").src = "static/svg/"+device.os+".svg";	
+	document.getElementById("os-icon").src = "static/svg/"+device.os+".svg";
+
+	document.getElementById("supported").style.display = "block";
+	document.getElementById("unsupported").style.display = "none";
+	
 	loadJSON(platform.metadataUrl, onReadMetadata,'jsonp');
 }
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>	
 <html lang="en">
 	<head>
-		<base href="${BASE_URL}/">
+		<base href="/">
 		<title>$IOTA_APP_TITLE</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,23 +25,28 @@
 				<div id="icon">
 					<img class="app-icon" src="static/icon.png">
 				</div>
-				<p id="description">
-					Click the button below to install <span class="title theme">$IOTA_APP_TITLE</span> to this device. Then, look for <span class="title theme">$IOTA_APP_TITLE</span> in your app library.
-				</p>
-				<div class="downloads">
-					<a id="download" href="$IOTA_DOWNLOAD_URL">
-					<button type="button" class="button">
-						<span id="download-text">Install</span>
-						<img id="os-icon" src="static/svg/unknown.svg" height="11" width="11" />
-						<br>
-						<span class="details" id="filesize">$IOTA_APP_SIZE</span></button>
-					</a>
+				<div id="supported" style="display: none">
+					<p id="description">
+						Click the button below to install <span class="title theme">$IOTA_APP_TITLE</span> to this device. Then, look for <span class="title theme">$IOTA_APP_TITLE</span> in your app library.
+					</p>
+					<div class="downloads">
+						<a id="download" href="$IOTA_DOWNLOAD_URL">
+						<button type="button" class="button">
+							<span id="download-text">Install</span>
+							<img id="os-icon" src="static/svg/unknown.svg" height="11" width="11" />
+							<br>
+							<span class="details" id="filesize">$IOTA_APP_SIZE</span></button>
+						</a>
+					</div>
+					<div>
+						<p id="meta">
+							Last updated <span id="timestamp">$IOTA_TIMESTAMP</span><br><span id="timestamp-secondary">$IOTA_TIMESTAMP</span>
+						</p>
+					</div>
 				</div>
-			</div>
-			<div>
-				<p id="meta">
-					Last updated <span id="timestamp">$IOTA_TIMESTAMP</span><br><span id="timestamp-secondary">$IOTA_TIMESTAMP</span>
-				</p>
+				<div id="unsupported" style="display: block">
+					<p>No downloads available for your device. Visit this page from a supported device.</p>
+				</div>
 			</div>
 		</div>
 	</body>
