@@ -52,3 +52,4 @@ You can deploy *iOTA* as part of your CI/CD workflow.
 # Links
 * [Moment.js](https://momentjs.com/)
 * [darken](https://github.com/ColinEspinas/darken)
+* [SVG Vectors and Icons](https://www.svgrepo.com/vectors/)
