@@ -33,6 +33,7 @@ function onReadConfig(data)
 	}
 
 	document.getElementById("download").href = platform.downloadUrl;
+	document.getElementById("os-icon").src = "static/svg/"+device.os+".svg";	
 	loadJSON(platform.metadataUrl, onReadMetadata,'jsonp');
 }
 
