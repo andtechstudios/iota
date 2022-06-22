@@ -20,6 +20,8 @@ jobs:
         id: meta
         with:
           images: ${{ github.repository }}
+          tags: |
+            type=semver,pattern={{version}}
       - uses: docker/build-push-action@v2
         with:
           builder: ${{ steps.buildx.outputs.name }}
