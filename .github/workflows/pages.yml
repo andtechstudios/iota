@@ -13,7 +13,7 @@ jobs:
         run: |
           export TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           export FILESIZE="14.2 MB"
-          cat << EOF > /exampleSite/metadata.json
+          cat << EOF > exampleSite/metadata.json
           {
             "timestamp": "$TIMESTAMP",
             "displaySize": "$FILESIZE"
