@@ -13,8 +13,12 @@ jobs:
         run: |
           export TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           export FILESIZE="14.2 MB"
-          cat <<< $(jq ".timestamp = \"$TIMESTAMP\"" exampleSite/metadata.json) > exampleSite/metadata.json
-          cat <<< $(jq ".displaySize = \"$FILESIZE\"" exampleSite/metadata.json) > exampleSite/metadata.json
+          cat << EOF > /exampleSite/metadata.json
+          {
+            "timestamp": "$TIMESTAMP",
+            "displaySize": "$FILESIZE"
+          }
+          EOF
       - run: |
           cd exampleSite
           export BASE_URL="https://andtechstudios.github.io/iota"
