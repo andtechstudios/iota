@@ -3,7 +3,8 @@
 		"windows":
 		{
 			"downloadUrl": "build.txt",
-			"metadataUrl": "metadata.json"
+			"metadataUrl": "metadata.json",
+			"icon": "windows"
 		},
 		"android":
 		{
