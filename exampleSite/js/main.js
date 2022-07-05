@@ -25,17 +25,29 @@ function onReadMetadata(data)
 }
 
 function onReadConfig(data)
-{	
-	var platform = data.platforms[device.os];
+{
+	// Get platform key
+	var key = device.os;
+	var hash = window.location.hash.substr(1);
+	if(!(hash === "")){
+		key = hash;
+	}
+	
+	var platform = data.platforms[key];
 	if (platform === undefined) {
 		document.getElementById("supported").style.display = "none";
 		document.getElementById("unsupported").style.display = "block";
 		return;
 	}
 
-	console.log("allowed");
+	var icon = platform.icon;
+	if (icon === "")
+	{
+		icon = key;
+	}
+
 	document.getElementById("download").href = platform.downloadUrl;
-	document.getElementById("os-icon").src = "static/svg/"+device.os+".svg";
+	document.getElementById("os-icon").src = "static/svg/"+icon+".svg";
 
 	document.getElementById("supported").style.display = "block";
 	document.getElementById("unsupported").style.display = "none";
