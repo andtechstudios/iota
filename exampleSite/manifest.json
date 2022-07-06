@@ -1,0 +1,22 @@
+{
+	"name":"iOS Over-the-Air Installer",
+	"short_name":"iOTA",
+	"start_url":"index.html",
+	"display":"standalone",
+	"background_color":"#000000",
+	"theme_color":"black",
+	"scope": ".",
+	"description":"Install applications over-the-air.",
+	"icons":[
+		{
+		"src":"static/icon-192x192.png",
+		"sizes":"192x192",
+		"type":"image/png"
+		},
+		{
+		"src":"static/icon-512x512.png",
+		"sizes":"512x512",
+		"type":"image/png"
+		}
+	]
+}
