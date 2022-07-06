@@ -41,7 +41,7 @@ function onReadConfig(data)
 	}
 
 	var icon = platform.icon;
-	if (icon === "")
+	if (icon === "" || icon === undefined)
 	{
 		icon = key;
 	}
