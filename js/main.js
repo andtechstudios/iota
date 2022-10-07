@@ -15,15 +15,6 @@ function loadJSON(path, success, error) {
 }
 
 // Callbacks
-function onReadMetadata(data)
-{
-	document.getElementById("filesize").textContent = data.displaySize;
-
-	var date = new Date(data.timestamp);
-	document.getElementById("timestamp").textContent = moment(date).fromNow();
-	document.getElementById("timestamp-secondary").textContent = moment(date).format('MMM D, HH:mm');
-}
-
 function onReadConfig(data)
 {
 	// Get platform key
@@ -48,12 +39,52 @@ function onReadConfig(data)
 
 	document.getElementById("download").href = platform.downloadUrl;
 	document.getElementById("os-icon").src = "static/svg/"+icon+".svg";
-
+	
 	document.getElementById("supported").style.display = "block";
 	document.getElementById("unsupported").style.display = "none";
 	
 	loadJSON(platform.metadataUrl, onReadMetadata,'jsonp');
 }
 
+function onReadMetadata(data)
+{
+	document.getElementById("filesize").textContent = data.displaySize;
+
+	var date = new Date(data.timestamp);
+	document.getElementById("timestamp").textContent = moment(date).fromNow();
+	document.getElementById("timestamp-secondary").textContent = moment(date).format('MMM D, HH:mm');
+
+	showNormalMetadata();
+}
+
+// Helper functions
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+function showNormalMetadata()
+{
+	document.getElementById("metadata-normal").style.display = "inline"
+	document.getElementById("metadata-loading").style.display = "none"
+}
+
+function showLoadingMetadata()
+{
+	document.getElementById("metadata-normal").style.display = "none"
+	document.getElementById("metadata-loading").style.display = "inline"
+}
+
+function inflateMetadata()
+{
+	showLoadingMetadata()
+
+	loadJSON("./config.json", onReadConfig,'jsonp');
+}
+
 // Begin code
-loadJSON("./config.json", onReadConfig,'jsonp');
+window.addEventListener('focus', async function () {
+	showLoadingMetadata()
+
+	await delay(333)
+
+	inflateMetadata()
+});
+inflateMetadata()
