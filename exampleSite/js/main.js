@@ -83,7 +83,7 @@ function inflateMetadata()
 window.addEventListener('focus', async function () {
 	showLoadingMetadata()
 
-	await delay(333)
+	await delay(666)
 
 	inflateMetadata()
 });
